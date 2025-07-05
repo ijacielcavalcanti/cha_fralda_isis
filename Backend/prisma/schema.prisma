@@ -1,7 +1,7 @@
 // 1. Definimos a fonte de dados.
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 // 2. Definimos o gerador do Prisma Client.
