@@ -1,0 +1,63 @@
+/* frontend/src/App.css (VERSÃO FLUIDA CORRIGIDA) */
+
+.app-container {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* --- ESTADO PADRÃO (MOBILE-FIRST) --- */
+/* Por padrão, as flores são visíveis e dimensionadas para mobile */
+.floral-decor {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 100; /* Mais suaves no mobile para não atrapalhar */
+  transition: all 0.3s ease-out;
+}
+
+.top-left { width: 90vw; left: -33vw; top: -35vh; }
+.top-right { width: 90vw; right: -35vw; top: -41vh; }
+.bottom-left { width: 90vw; left: -35vw; bottom: -30vh; }
+.bottom-right { width: 90vw; right: -35vw; bottom: -30vh; }
+
+
+/* --- ESTADO PARA TELAS GRANDES (DESKTOP) --- */
+/* Quando a tela tiver 1024px de largura ou mais... */
+@media (min-width: 1024px) {
+  .floral-decor {
+    opacity: 1000; /* Um pouco mais visíveis no desktop */
+    position: fixed; /* Usamos 'fixed' no desktop para não rolarem com a página */
+  }
+
+  /* Posicionamento e dimensionamento para cada canto */
+  .top-left {
+    top: -60vh;
+    left: -30vw;
+    width: 70vw; 
+    max-width: 1800px;
+  }
+
+  .top-right {
+    top: -70vh;
+    right: -30vw;
+    width: 70vw;
+    max-width: 1800px;
+  }
+
+  .bottom-left {
+    bottom: -50vh;
+    left: -20vw;
+    width: 50vw;
+    max-width: 1800px;
+  }
+
+  .bottom-right {
+    bottom: -50vh;
+    right: -20vw;
+    width: 50vw;
+    max-width: 1800px;
+  }
+}

@@ -1,0 +1,76 @@
+// 1. Definimos a fonte de dados.
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 2. Definimos o gerador do Prisma Client.
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Em backend/prisma/schema.prisma
+
+model Convidado {
+  id                   Int               @id @default(autoincrement())
+  nome                 String
+  celular              String?           // NOVO: Adiciona o campo celular, '?' o torna opcional
+  adultos              Int
+  criancas             Int               @default(0)
+  confirmacao_presenca Boolean           @default(false)
+  data_confirmacao     DateTime?
+  reservas             ReservaPresente[]
+  mensagens            MensagemMural[]
+  reservasMimo         ReservaMimo[]
+}
+
+model ItemPresente {
+  id                        Int               @id @default(autoincrement())
+  nome                      String            @unique
+  tipo                      String
+  tamanho                   String?
+  quantidade_total_desejada Int
+  quantidade_reservada      Int               @default(0)
+  imagem_url                String?
+  reservado_por             ReservaPresente[]
+}
+
+model ReservaPresente {
+  id               Int          @id @default(autoincrement())
+  convidado        Convidado    @relation(fields: [convidado_id], references: [id])
+  convidado_id     Int
+  itemPresente     ItemPresente @relation(fields: [item_presente_id], references: [id])
+  item_presente_id Int
+  data_reserva     DateTime     @default(now())
+}
+
+// NOVO! Modelo para os Mimos
+model Mimo {
+  id                        Int           @id @default(autoincrement())
+  nome                      String        @unique
+  quantidade_total_desejada Int
+  quantidade_reservada      Int           @default(0)
+  imagem_url                String?
+  reservado_por             ReservaMimo[]
+}
+
+// NOVO! Tabela de relacionamento entre Convidado e Mimo
+model ReservaMimo {
+  id           Int       @id @default(autoincrement())
+  convidado    Convidado @relation(fields: [convidado_id], references: [id])
+  convidado_id Int
+  mimo         Mimo      @relation(fields: [mimo_id], references: [id])
+  mimo_id      Int
+  data_reserva DateTime  @default(now())
+}
+
+model MensagemMural {
+  id             Int       @id @default(autoincrement())
+  nome_remetente String
+  mensagem       String
+  data_envio     DateTime  @default(now())
+  aprovada       Boolean   @default(false)
+  // GARANTIA: A relação abaixo permite que a mensagem seja ligada a um convidado
+  convidado      Convidado? @relation(fields: [convidado_id], references: [id])
+  convidado_id   Int?
+}

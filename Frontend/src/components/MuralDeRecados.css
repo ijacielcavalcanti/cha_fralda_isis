@@ -1,0 +1,34 @@
+/* frontend/src/components/MuralDeRecados.css (ANIMAÇÃO PARA CARDS MUI) */
+.mural-container {
+  width: 100%;
+  text-align: center;
+}
+
+.mural-animacao-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.recado-card {
+  position: absolute !important; /* !important para sobrescrever o estilo do MUI */
+  padding: 16px;
+  width: 220px;
+  border-radius: 8px !important;
+  animation-name: cascata-diagonal;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+@keyframes cascata-diagonal {
+  0% { opacity: 0; transform: translate(-100px, -100px) rotate(-15deg); }
+  20%, 80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(150px, 200px) rotate(15deg); }
+}
+
+.card-animacao-1 { top: 10%; left: 0%; animation-delay: 0s; }
+.card-animacao-2 { top: -5%; left: 30%; animation-delay: 7s; }
+.card-animacao-3 { top: 5%; left: 60%; animation-delay: 14s; }

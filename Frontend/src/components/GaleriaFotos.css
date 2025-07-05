@@ -1,0 +1,24 @@
+/* frontend/src/components/GaleriaFotos.css */
+.polaroid-card {
+  background-color: #fff;
+  padding: 16px;
+  padding-bottom: 45px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+.polaroid-card:hover {
+  transform: scale(1.05) rotate(0deg) !important;
+  z-index: 10;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.polaroid-card img {
+  width: 100%;
+  display: block;
+}
+/* O truque para inclinar cada foto de forma diferente */
+.polaroid-card:nth-child(4n + 1) { transform: rotate(-4deg); }
+.polaroid-card:nth-child(4n + 2) { transform: rotate(2deg); }
+.polaroid-card:nth-child(4n + 3) { transform: rotate(5deg); }
+.polaroid-card:nth-child(4n + 4) { transform: rotate(-2deg); }
