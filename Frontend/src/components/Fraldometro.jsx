@@ -11,7 +11,7 @@ function Fraldometro() {
   useEffect(() => {
     async function fetchEstatisticas() {
       try {
-        const response = await fetch('http://localhost:3000/estatisticas/fraldas');
+        const response = await fetch('${import.meta.env.VITE_API_URL}/estatisticas/fraldas');
         const data = await response.json();
         if (data.totalDesejado > 0) {
           setEstatisticas(data);

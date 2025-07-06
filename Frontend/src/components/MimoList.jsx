@@ -11,7 +11,7 @@ function MimoList({ mimoSelecionado, onMimoClick, onProximoClick, onVoltarClick 
   useEffect(() => {
     async function fetchMimos() {
       try {
-        const response = await fetch('http://localhost:3000/mimos');
+        const response = await fetch('${import.meta.env.VITE_API_URL}/mimos');
         const data = await response.json();
         setMimos(data);
       } catch (error) { console.error("Falha ao buscar mimos:", error); }

@@ -27,7 +27,7 @@ function RsvpForm({ itemSelecionadoId, mimoSelecionadoId, onConfirmacaoSucesso, 
     };
 
     try {
-      const response = await fetch('http://localhost:3000/confirmar', {
+      const response = await fetch('${import.meta.env.VITE_API_URL}/confirmar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dadosParaEnviar),
