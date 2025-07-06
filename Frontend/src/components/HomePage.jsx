@@ -26,7 +26,7 @@ function HomePage({onConfirmarClick, onMuralClick, onRevelacaoClick}) {
               <ReactCurvedText
                 width={420}
                 height={100}
-                cx={190}
+                cx={205}
                 cy={90}
                 rx={210}
                 ry={50}
@@ -43,7 +43,7 @@ function HomePage({onConfirmarClick, onMuralClick, onRevelacaoClick}) {
                 textPathProps={{ fill: '#a6265f' }}
                 svgProps={{ 'aria-label': 'Chá de Fralda da' }}
               />
-              <Typography variant="h1" component="h1" sx={{ color: '#ed7781', fontSize: '8rem', mt: -4 }}>
+              <Typography variant="h1" component="h1" sx={{ textAlign: 'center', color: '#ed7781', fontSize: '8rem', mt: -4 }}>
                 Maria Ísis
               </Typography>
             </Box>
