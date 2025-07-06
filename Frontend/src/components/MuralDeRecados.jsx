@@ -9,7 +9,7 @@ function MuralDeRecados({ onMuralClick }) {
   useEffect(() => {
     async function fetchMensagens() {
       try {
-        const response = await fetch('${import.meta.env.VITE_API_URL}/mensagens');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/mensagens`);
         if (!response.ok) return; // Se a resposta não for OK, não faz nada
         const data = await response.json();
         setMensagens(data);

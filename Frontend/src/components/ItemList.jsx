@@ -18,7 +18,7 @@ function ItemList({ itemSelecionado, onItemClick, onProximoClick, onVoltarClick 
   useEffect(() => {
     async function fetchItens() {
       try {
-        const response = await fetch('${import.meta.env.VITE_API_URL}/itens');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/itens`);
         const data = await response.json();
         setItens(data);
       } catch (error) { console.error("Falha ao buscar itens:", error); }
