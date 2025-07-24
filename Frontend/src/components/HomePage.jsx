@@ -54,7 +54,7 @@ function HomePage({onConfirmarClick, onMuralClick, onRevelacaoClick}) {
                 <img src={iconeGps} alt="ícone de localização" style={{ width: '50px' }} />
                 <Box sx={{ textAlign: 'left', color: '#666' }}>
                   <Typography sx={{ fontWeight: 'bold', color: '#333' }}>24 DE AGO - 13H00</Typography>
-                  <Typography>Rua coqueirinho - Pitangui</Typography>
+                  <Typography>Rua do Meio, 83 - Murici, Extremoz</Typography>
                 </Box>
               </Box>
             </a>
