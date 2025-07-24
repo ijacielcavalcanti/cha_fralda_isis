@@ -18,7 +18,6 @@
     "react": "^19.1.0",
     "react-curved-text": "^3.0.1",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.3",
     "react-tsparticles": "^2.12.2",
     "tsparticles-slim": "^2.12.0"
   },

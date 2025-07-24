@@ -2,20 +2,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
-import './index.css';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme';
+import './index.css'; // Manteremos o index.css para o fundo e fontes
 
-// 1. Importamos o BrowserRouter
-import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './Theme.js'; // Importamos nosso tema
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* 2. Envolvemos nossa App com ele */}
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
 );

@@ -24,18 +24,18 @@ function MimoList({ mimoSelecionado, onMimoClick, onProximoClick, onVoltarClick 
       <Typography variant="h2" component="h2" sx={{ mb: 4 }}>
         Escolha um Mimo
       </Typography>
-
+      
       {/* A grade agora está configurada para ter no máximo 3 colunas em telas maiores */}
       <Grid container spacing={2} justifyContent="center">
         {mimos.map(mimo => (
           // AQUI ESTÁ A LÓGICA DA GRADE: 2 colunas no mobile (xs=6), 3 colunas no desktop (sm=4)
           <Grid xs={6} sm={4} key={mimo.id}>
             <CardActionArea onClick={() => onMimoClick(mimo.id)} sx={{ borderRadius: '16px' }}>
-              <Card
+              <Card 
                 elevation={mimoSelecionado === mimo.id ? 8 : 2}
                 sx={{
                   // AJUSTE O PADDING (p) PARA CONTROLAR O TAMANHO GERAL DO CARD
-                  p: 1,
+                  p: 1, 
                   borderRadius: '16px', border: 2,
                   borderColor: mimoSelecionado === mimo.id ? 'primary.main' : 'transparent',
                   transform: mimoSelecionado === mimo.id ? 'scale(1.05)' : 'none',
@@ -49,7 +49,7 @@ function MimoList({ mimoSelecionado, onMimoClick, onProximoClick, onVoltarClick 
                 <Box sx={{ color: mimoSelecionado === mimo.id ? 'primary.main' : 'text.primary' }}>
                   <CardGiftcardIcon sx={{ fontSize: '2rem' }} />
                   {/* AJUSTE O TAMANHO DA FONTE AQUI */}
-                  <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: '0.9rem' }}>
+                  <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: '0.9rem' }}> 
                     {mimo.nome}
                   </Typography>
                   <Typography variant="caption" sx={{ color: 'text.secondary' }}>
@@ -66,10 +66,10 @@ function MimoList({ mimoSelecionado, onMimoClick, onProximoClick, onVoltarClick 
       <Box sx={{ mt: 5, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2, minHeight: '68px' }}>
         <BackButton onClick={onVoltarClick} />
         {mimoSelecionado && (
-          <Button
-            onClick={onProximoClick}
-            variant="contained"
-            color="primary"
+          <Button 
+            onClick={onProximoClick} 
+            variant="contained" 
+            color="primary" 
             sx={{ borderRadius: '50px', px: 5, py: 1.5, fontSize: '1.1rem', textTransform: 'none' }}
           >
             {/* O texto do botão agora indica o próximo passo */}
