@@ -8,8 +8,8 @@ import ReactCurvedText from 'react-curved-text'; // Mantemos a importação
 import iconeGps from '../assets/gps-icon.png';
 
 function HomePage({onConfirmarClick, onMuralClick, onRevelacaoClick}) {
-  const endereco = "Rua do morro, 6, Pitangui, Extremoz - RN";
-  const googleMapsUrl = `https://www.google.com/maps/place/5°37'44.3"S+35°13'34.4"W/@-5.628969,-35.2310959,881m/data=!3m2!1e3!4b1!4m12!1m7!3m6!1s0x7b3a7005764e4ad:0xbc27e2e8ac10ac5!2sPitangui+Extremoz!8m2!3d-5.6323183!4d-35.2276633!16s%2Fg%2F11vqx103jj!3m3!8m2!3d-5.628969!4d-35.226225?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D`;
+  const endereco = "Rua do Meio, 83, Murici, Extremoz - RN";
+  const googleMapsUrl = `https://www.google.com/maps/place/Espaço+Matias/@-5.6862172,-35.4251446,28187m/data=!3m1!1e3!4m10!1m2!2m1!1sespaço+do+matias!3m6!1s0x7b3a9004f8033e3:0xc26360197ba397c4!8m2!3d-5.6699319!4d-35.2926484!15sChFlc3Bhw6dvIGRvIG1hdGlhc5IBC2V2ZW50X3ZlbnVlqgFREAEqFSIRZXNwYcOnbyBkbyBtYXRpYXMoDDIfEAEiG1Sqe-PGk6Ui29O2RMIXNwXP2H8ptAiIHLtskjIVEAIiEWVzcGHDp28gZG8gbWF0aWFz4AEA!16s%2Fg%2F11vsw97pyj?entry=ttu&g_ep=EgoyMDI1MDcyMS4wIKXMDSoASAFQAw%3D%3D`;
 
   return (
     <Box sx={{ width: '100%', maxWidth: '1100px', mx: 'auto', p: 2 }}>
