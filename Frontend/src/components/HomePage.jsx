@@ -7,9 +7,9 @@ import MuralDeRecados from './MuralDeRecados.jsx';
 import ReactCurvedText from 'react-curved-text'; // Mantemos a importação
 import iconeGps from '../assets/gps-icon.png';
 
-function HomePage({onConfirmarClick, onMuralClick, onRevelacaoClick}) {
-  const endereco = "Rua do Meio, 83, Murici, Extremoz - RN";
-  const googleMapsUrl = `https://www.google.com/maps/place/Espaço+Matias/@-5.6862172,-35.4251446,28187m/data=!3m1!1e3!4m10!1m2!2m1!1sespaço+do+matias!3m6!1s0x7b3a9004f8033e3:0xc26360197ba397c4!8m2!3d-5.6699319!4d-35.2926484!15sChFlc3Bhw6dvIGRvIG1hdGlhc5IBC2V2ZW50X3ZlbnVlqgFREAEqFSIRZXNwYcOnbyBkbyBtYXRpYXMoDDIfEAEiG1Sqe-PGk6Ui29O2RMIXNwXP2H8ptAiIHLtskjIVEAIiEWVzcGHDp28gZG8gbWF0aWFz4AEA!16s%2Fg%2F11vsw97pyj?entry=ttu&g_ep=EgoyMDI1MDcyMS4wIKXMDSoASAFQAw%3D%3D`;
+function HomePage({ onConfirmarClick, onMuralClick, onRevelacaoClick }) {
+  const endereco = "Rua Boi de Rei 89, Eva Recepções, Extremoz - RN";
+  const googleMapsUrl = `https://www.google.com/maps/place/Eva+Recepções/@-5.692699,-35.2792738,185m/data=!3m1!1e3!4m15!1m8!3m7!1s0x7b3a8e05e276ec7:0x4ed839ae4d2fa7a8!2sR.+Brincantes,+Extremoz+-+RN,+59575-000!3b1!8m2!3d-5.6930494!4d-35.2785301!16s%2Fg%2F11j11gj_p1!3m5!1s0x7b3a90033ab28eb:0xc8b750a1c2c712f1!8m2!3d-5.6923852!4d-35.2790764!16s%2Fg%2F11x78n2rvb?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D`;
 
   return (
     <Box sx={{ width: '100%', maxWidth: '1100px', mx: 'auto', p: 2 }}>
@@ -43,7 +43,7 @@ function HomePage({onConfirmarClick, onMuralClick, onRevelacaoClick}) {
                 textPathProps={{ fill: '#a6265f' }}
                 svgProps={{ 'aria-label': 'Chá de Fralda da' }}
               />
-              <Typography variant="h1" component="h1" sx={{ textAlign: 'center', mr:3, color: '#ed7781', fontSize: '8rem', mt: -4 }}>
+              <Typography variant="h1" component="h1" sx={{ textAlign: 'center', mr: 3, color: '#ed7781', fontSize: '8rem', mt: -4 }}>
                 Maria Ísis
               </Typography>
             </Box>
@@ -54,7 +54,8 @@ function HomePage({onConfirmarClick, onMuralClick, onRevelacaoClick}) {
                 <img src={iconeGps} alt="ícone de localização" style={{ width: '50px' }} />
                 <Box sx={{ textAlign: 'left', color: '#666' }}>
                   <Typography sx={{ fontWeight: 'bold', color: '#333' }}>24 DE AGO - 15H00</Typography>
-                  <Typography>Rua do Meio, 83 - Murici, Extremoz</Typography>
+                  <Typography>Rua Boi de Reis, 89 </Typography>
+                  <Typography>Eva Recepções, Extremoz - RN</Typography>
                 </Box>
               </Box>
             </a>
